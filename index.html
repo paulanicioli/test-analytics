@@ -113,9 +113,9 @@ required>
   </form>
 
  <h1>Cart Completion</h1>
-  <button class="cart-btn">Cart View</button>
-  <button class="checkout-btn">Checkout Started</button>
- <button class="success-btn">Checkout Completed</button>
+  <button class="cart-btn" onclick="dataLayer.push({'event': 'cart_view'})">Cart View</button>
+  <button class="checkout-btn" onclick="dataLayer.push({'event': 'checkout_start'})">Checkout Started</button>
+ <button class="success-btn" onclick="dataLayer.push({'event': 'checkout_successful', 'conversionValue': 100})">Checkout Completed</button>
 
  
 </body>
