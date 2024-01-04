@@ -71,8 +71,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
  
   <h1>What are your thoughts on our product?</h1>
-  <button class="buy-btn">I want to buy!</button>
-  <button class="not-interested-btn">I am not interested!</button>
+  <button class="buy-btn" onclick="dataLayer.push({'event': 'click_buy'})">I want to buy!</button>
+  <button class="not-interested-btn" onclick="dataLayer.push({'event': 'click_no_interest'})" >I am not interested!</button>
  <h1>Contact us</h1>
    <form id="contact-info">
     <label
