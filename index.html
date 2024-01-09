@@ -14,8 +14,15 @@ window.dataLayer = window.dataLayer || [];
  'visitorType': 'customer'
 })
 </script>
+<!-- Google Tag Manager Web Container FOR SSGTM -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KK664RRC');</script>
+<!-- End Google Tag Manager -->
 
- <!-- Google Tag Manager -->
+ <!-- Google Tag Manager Web Container ONLY-->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -60,8 +67,12 @@ content="width=device-width, initial-scale=1.0">
   </style>
 </head>
 <body>
+ <!-- Google Tag Manager (noscript) Web Container FOR SSGTM  -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK664RRC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
- <!-- Google Tag Manager (noscript)-->
+ <!-- Google Tag Manager (noscript) Web Container ONLY--->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVR9NG9F"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -114,8 +125,12 @@ required>
   <button class="checkout-btn" onclick="dataLayer.push({'event': 'checkout_start'});">Checkout Started</button>
  <button class="success-btn" onclick="dataLayer.push({'event': 'checkout_successful', 'conversionValue': 100});">Checkout Completed</button>
 
- <div></div>
- <button onclick="console.log(dataLayer)">Check dataLayer</button>
+ <div>
+  <form onsubmit="dataLayer.push({'event': getElementById("event")})">
+   <label for="event">Event to pass along</label>
+   <input id="event" type="text">
+  </form>
+ </div>
  
 </body>
 </html>
