@@ -3,6 +3,6 @@ document
   .addEventListener("submit", leadForm);
 
 function leadForm() {
-  dataLayer.push({'email': getElementById("email").value);
+  dataLayer.push({'email': getElementById("email").value});
   console.log('Form submitted!');
 }
