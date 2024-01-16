@@ -4,4 +4,5 @@ document
 
 function leadForm() {
   dataLayer.push({'email': getElementById("email").value);
+  console.log('Form submitted!');
 }
