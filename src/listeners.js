@@ -1,5 +1,5 @@
 document
-  .getElementById("initial-form")
+  .getElementById("contact-info")
   .addEventListener("submit", leadForm);
 
 function leadForm() {
