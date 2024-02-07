@@ -93,6 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
  <!-- Start Carousel -->
+ <div class="container-xl">
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -131,17 +132,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+ </div>
  <!-- End Carousel -->
 
  
- 
+ <div class="container-md">
   <h1 class="text-center">What are your thoughts on our product?</h1>
  <div class="d-flex justify-content-evenly">
   <button class="buy-btn btn btn-success" onclick="dataLayer.push({'event': 'click_buy'});">I want to buy!</button>
   <button class="not-interested-btn btn btn-danger" onclick="dataLayer.push({'event': 'click_no_interest'});" >I am not interested!</button>
   </div>
+</div>
 
- 
+ <div class="container-sm">
  <h1 class="text-center">Contact us</h1>
    <form id="contact-info">
    <div class="mb-3 align-items-center">
@@ -156,13 +159,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <button type="submit" class="d-flex justify-center btn btn-primary">Submit</button>
   </form>
+  </div>
 
+ <div class="container-md">
  <h1>Cart Completion</h1>
   <button class="cart-btn btn mx-auto" onclick="dataLayer.push({'event': 'cart_view'});">Cart View</button>
   <button class="checkout-btn btn mx-auto" onclick="dataLayer.push({'event': 'checkout_start'});">Checkout Started</button>
  <button class="success-btn btn mx-auto" onclick="dataLayer.push({'event': 'checkout_successful', 'conversionValue': 100});">Checkout Completed</button>
+</div>
 
- <div>
+ 
+ <div class="container-sm">
   <form onsubmit="dataLayer.push({'event': getElementById("event")})">
    <label for="event">Event to pass along</label><br>
    <input id="event" type="text"><br><br>
