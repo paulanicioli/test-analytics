@@ -163,9 +163,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
  <div class="container-md">
  <h1>Cart Completion</h1>
-  <button class="cart-btn btn mx-auto" onclick="dataLayer.push({'event': 'cart_view'});">Cart View</button>
-  <button class="checkout-btn btn mx-auto" onclick="dataLayer.push({'event': 'checkout_start'});">Checkout Started</button>
- <button class="success-btn btn mx-auto" onclick="dataLayer.push({'event': 'checkout_successful', 'conversionValue': 100});">Checkout Completed</button>
+  <button class="cart-btn btn btn-outline-primary mx-auto" onclick="dataLayer.push({'event': 'cart_view'});">Cart View</button>
+  <button class="checkout-btn btn btn btn-outline-primary mx-auto" onclick="dataLayer.push({'event': 'checkout_start'});">Checkout Started</button>
+ <button class="success-btn btn btn-primary mx-auto" onclick="dataLayer.push({'event': 'checkout_successful', 'conversionValue': 100});">Checkout Completed</button>
 </div>
 
  
@@ -173,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <form onsubmit="dataLayer.push({'event': getElementById("event")})">
    <label for="event">Event to pass along</label><br>
    <input id="event" type="text"><br><br>
-   <input type="submit" value="Submit">
+   <input type="submit" value="Submit" class="btn btn-outline-primary">
   </form>
  </div>
     <!-- Cookie Banner -->
