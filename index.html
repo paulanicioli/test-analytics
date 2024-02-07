@@ -137,8 +137,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  
   <h1 class="text-center">What are your thoughts on our product?</h1>
  <div class="d-flex justify-content-evenly">
-  <button class="buy-btn" onclick="dataLayer.push({'event': 'click_buy'});">I want to buy!</button>
-  <button class="not-interested-btn" onclick="dataLayer.push({'event': 'click_no_interest'});" >I am not interested!</button>
+  <button class="buy-btn btn btn-success" onclick="dataLayer.push({'event': 'click_buy'});">I want to buy!</button>
+  <button class="not-interested-btn btn btn-danger" onclick="dataLayer.push({'event': 'click_no_interest'});" >I am not interested!</button>
   </div>
 
  
@@ -158,9 +158,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </form>
 
  <h1>Cart Completion</h1>
-  <button class="cart-btn mx-auto" onclick="dataLayer.push({'event': 'cart_view'});">Cart View</button>
-  <button class="checkout-btn mx-auto" onclick="dataLayer.push({'event': 'checkout_start'});">Checkout Started</button>
- <button class="success-btn mx-auto" onclick="dataLayer.push({'event': 'checkout_successful', 'conversionValue': 100});">Checkout Completed</button>
+  <button class="cart-btn btn mx-auto" onclick="dataLayer.push({'event': 'cart_view'});">Cart View</button>
+  <button class="checkout-btn btn mx-auto" onclick="dataLayer.push({'event': 'checkout_start'});">Checkout Started</button>
+ <button class="success-btn btn mx-auto" onclick="dataLayer.push({'event': 'checkout_successful', 'conversionValue': 100});">Checkout Completed</button>
 
  <div>
   <form onsubmit="dataLayer.push({'event': getElementById("event")})">
