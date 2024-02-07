@@ -17,6 +17,7 @@ function hideCookieBanner(){
     localStorage.setItem("cb_isCookieAccepted", "yes");
     document.cookie = "analytics_storage=granted";
     document.cookie = "ads_storage=granted";
+    dataLayer.push{'event':'consent_update'}
 
     let cookieBanner = document.getElementById("cb-cookie-banner");
     cookieBanner.style.display = "none";
