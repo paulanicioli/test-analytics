@@ -49,11 +49,11 @@ function manageCookieSettings() {
         console.log("element: ",param);
         console.log("element values",document.getElementById(param));
         if (document.getElementById(param).checked){
-            document.cookie = i+"=granted";
+            document.cookie = param+"=granted";
             consentStatus = "yes";
         }
         else {
-            document.cookie = i+"=denied";
+            document.cookie = param+"=denied";
         }
     });
     dataLayer.push({'event':'consent_update'});
