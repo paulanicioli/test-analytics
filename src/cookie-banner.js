@@ -53,7 +53,7 @@ function manageCookieSettings() {
         }
         else {
             document.cookie = i+"=denied";
-
+        }
     });
     dataLayer.push({'event':'consent_update'});
     hideSettingsBanner(consentStatus);    
