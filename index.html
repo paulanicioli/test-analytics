@@ -235,9 +235,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
  <div class="container-md">
  <h1>Cart Completion</h1>
-  <button class="cart-btn btn btn-outline-primary mx-auto" onclick="dataLayer.push({'event': 'cart_view'});">Cart View</button>
-  <button class="checkout-btn btn btn btn-outline-primary mx-auto" onclick="dataLayer.push({'event': 'checkout_start'});">Checkout Started</button>
- <button class="success-btn btn btn-primary mx-auto" onclick="dataLayer.push({'event': 'checkout_successful', 'conversionValue': 100});">Checkout Completed</button>
+  <button id="cart_view" class="cart-btn btn btn-outline-primary mx-auto" onclick=window.bn_cuttonClickEvent(this)>Cart View</button>
+  <button id="checkout_start" class="checkout-btn btn btn btn-outline-primary mx-auto" onclick=window.bn_buttonClickEvent(this)>Checkout Started</button>
+ <button id="checkout_successful" class="success-btn btn btn-primary mx-auto" onclick=window.bn_buttonClickEvent(this)>Checkout Completed</button>
 </div>
 
  
@@ -251,15 +251,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
    <!-- Product Purchase Toast -->
 
- <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+ <div id="errorMessage" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-    <img src="..." class="rounded me-2" alt="...">
-    <strong class="me-auto">Bootstrap</strong>
-    <small>11 mins ago</small>
+    <img src="./src/poliflower-logo.png" class="rounded me-2" alt="PoliFlower logo">
+    <strong class="me-auto">PoliFlower</strong>
+    <small>Just now!</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
-    Hello, world! This is a toast message.
+    Hey, thanks for your interest! Our website is still under construction. Fill out our contact form and we'll reach out!
   </div>
 </div>
 
