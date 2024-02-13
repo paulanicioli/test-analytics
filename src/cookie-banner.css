@@ -20,11 +20,12 @@
   }
 
   .end-of-page{
-    height: 100px;
+    height: 50px;
     width: 100%;
     background-color: white;
   }
 
   .polinav{
     padding: 20px;
+    margin-bottom: 30px;
   }
