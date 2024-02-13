@@ -18,3 +18,9 @@
     border-radius: 0;
     display: none;
   }
+
+  .end-of-page{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+  }
