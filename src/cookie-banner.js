@@ -2,6 +2,8 @@
 * Javascript to show and hide cookie banner using localstorage
 */
 
+const CONSENT_PARAMS = ['ad_storage', 'analytics_storage', 'ad_user_data','ad_personalization'];
+
 /**
  * @description Shows the cookie banner
  */
@@ -42,7 +44,9 @@ function rejectAllCookies(){
 function manageCookieSettings() {
     console.log("called function manageCookieSettings");
     let consentStatus = "no";
-    for (i in ['ad_storage', 'analytics_storage', 'ad_user_data','ad_personalization']) {
+    for (i in CONSENT_PARAMS) {
+        console.log("element: ",i)
+        console.log("element values",document.getElementById(i));
         if (document.getElementById(i).checked){
             document.cookie = i+"=granted";
             consentStatus = "yes";
