@@ -10,6 +10,12 @@ function showCookieBanner(){
     cookieBanner.style.display = "block";
 }
 
+function showSettingsBanner(){
+    hideCookieBanner("yes");
+    let cookieSettingsBanner = document.getElementById("cb-manage-cookie-settings");
+    cookieSettingsBanner.style.display = "block";
+}
+
 /**
  * @description Hides the Cookie banner and saves the value to localstorage
  */
@@ -31,21 +37,23 @@ function rejectAllCookies(){
     hideCookieBanner("no");
 }
 
-function manageCookieSettings(){
-    console.log("manageCookieSettings function called!");
+function manageCookieSettings() {
+    console.log(document.getElementById("ad_storage"));
+    const attempt1 = document.getElementById("ad_storage").value;
+    console.log("ad_storage.value: ",attempt1);
 
-    // document.cookie = "analytics_storage=denied";
-    // document.cookie = "ads_storage=denied";
-    // document.cookie = "ad_user_data=denied";
-    // document.cookie = "ad_personalization=denied";
-    // dataLayer.push({'event':'consent_update'});
-    hideCookieBanner("yes");
 }
 
 function hideCookieBanner(y){
     localStorage.setItem("cb_isCookieAccepted", y);
     let cookieBanner = document.getElementById("cb-cookie-banner");
     cookieBanner.style.display = "none";
+}
+
+function hideSettingsBanner(y){
+    hideCookieBanner(y);
+    let cookieSettingsBanner = document.getElementById("cb-manage-cookie-settings");
+    cookieSettingsBanner.style.display = "none";
 }
 
 /**
@@ -61,5 +69,7 @@ function initializeCookieBanner(){
 
 // Assigning values to window object
 window.onload = initializeCookieBanner();
+window.cb_showSettingsBanner = showSettingsBanner;
 window.cb_acceptAllCookies = acceptAllCookies;
 window.cb_rejectAllCookies = rejectAllCookies;
+window.cb_manageCookieSettings = manageCookieSettings;
