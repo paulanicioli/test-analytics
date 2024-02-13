@@ -38,9 +38,17 @@ function rejectAllCookies(){
 }
 
 function manageCookieSettings() {
-    console.log(document.getElementById("ad_storage"));
-    const attempt1 = document.getElementById("ad_storage").value;
-    console.log("ad_storage.value: ",attempt1);
+    let consentStatus = "no";
+    for i in ['ad_storage', 'analytics_storage', 'ad_user_data','ad_personalization']:
+        if (document.getElementById(i).value =="on"){
+            document.cookie = i+"=granted";
+            consentStatus = "yes";
+        }
+        else {
+            document.cookie = i+"=denied";
+        }
+    dataLayer.push({'event':'consent_update'});
+    hideSettingsBanner(consentStatus);    
 
 }
 
