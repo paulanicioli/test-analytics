@@ -43,7 +43,7 @@ function manageCookieSettings() {
     console.log("called function manageCookieSettings");
     let consentStatus = "no";
     for (i in ['ad_storage', 'analytics_storage', 'ad_user_data','ad_personalization']) {
-        if (document.getElementById(i).value =="on"){
+        if (document.getElementById(i).checked){
             document.cookie = i+"=granted";
             consentStatus = "yes";
         }
