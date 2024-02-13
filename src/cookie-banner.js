@@ -44,6 +44,7 @@ function rejectAllCookies(){
 function manageCookieSettings() {
     console.log("called function manageCookieSettings");
     let consentStatus = "no";
+    console.log("consentparams:",CONSENT_PARAMS);
     CONSENT_PARAMS.forEach((param) => {
         console.log("element: ",param);
         console.log("element values",document.getElementById(param));
