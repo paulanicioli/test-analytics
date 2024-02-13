@@ -44,17 +44,17 @@ function rejectAllCookies(){
 function manageCookieSettings() {
     console.log("called function manageCookieSettings");
     let consentStatus = "no";
-    for (i in CONSENT_PARAMS) {
-        console.log("element: ",i)
-        console.log("element values",document.getElementById(i));
-        if (document.getElementById(i).checked){
+    CONSENT_PARAMS.forEach((param) => {
+        console.log("element: ",param);
+        console.log("element values",document.getElementById(param));
+        if (document.getElementById(param).checked){
             document.cookie = i+"=granted";
             consentStatus = "yes";
         }
         else {
             document.cookie = i+"=denied";
-        }
-    }
+
+    });
     dataLayer.push({'event':'consent_update'});
     hideSettingsBanner(consentStatus);    
 
