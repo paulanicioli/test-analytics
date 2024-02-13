@@ -13,12 +13,37 @@ function showCookieBanner(){
 /**
  * @description Hides the Cookie banner and saves the value to localstorage
  */
-function hideCookieBanner(){
-    localStorage.setItem("cb_isCookieAccepted", "yes");
+function acceptAllCookies(){
     document.cookie = "analytics_storage=granted";
     document.cookie = "ads_storage=granted";
+    document.cookie = "ad_user_data=granted";
+    document.cookie = "ad_personalization=granted";
     dataLayer.push({'event':'consent_update'});
+    hideCookieBanner("yes");
+}
 
+function rejectAllCookies(){
+    document.cookie = "analytics_storage=denied";
+    document.cookie = "ads_storage=denied";
+    document.cookie = "ad_user_data=denied";
+    document.cookie = "ad_personalization=denied";
+    dataLayer.push({'event':'consent_update'});
+    hideCookieBanner("no");
+}
+
+function manageCookieSettings(){
+    console.log("manageCookieSettings function called!");
+
+    // document.cookie = "analytics_storage=denied";
+    // document.cookie = "ads_storage=denied";
+    // document.cookie = "ad_user_data=denied";
+    // document.cookie = "ad_personalization=denied";
+    // dataLayer.push({'event':'consent_update'});
+    hideCookieBanner("yes");
+}
+
+function hideCookieBanner(y){
+    localStorage.setItem("cb_isCookieAccepted", y);
     let cookieBanner = document.getElementById("cb-cookie-banner");
     cookieBanner.style.display = "none";
 }
@@ -30,14 +55,11 @@ function initializeCookieBanner(){
     let isCookieAccepted = localStorage.getItem("cb_isCookieAccepted");
     if(isCookieAccepted === null)
     {
-        localStorage.setItem("cb_isCookieAccepted", "no");
-        showCookieBanner();
-    }
-    if(isCookieAccepted === "no"){
         showCookieBanner();
     }
 }
 
 // Assigning values to window object
 window.onload = initializeCookieBanner();
-window.cb_hideCookieBanner = hideCookieBanner;
+window.cb_acceptAllCookies = acceptAllCookies;
+window.cb_rejectAllCookies = rejectAllCookies;
