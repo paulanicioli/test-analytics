@@ -149,15 +149,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
  
- <div class="container-md">
-  <h1 class="text-center">What are your thoughts on our product?</h1>
- <div class="d-flex justify-content-evenly">
-  <button class="buy-btn btn btn-success" onclick="dataLayer.push({'event': 'click_buy'});">I want to buy!</button>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Are you interested in our flower arrangements?</h5>
+    <h6 class="card-subtitle mb-2 text-muted">PoliFlower is here for you and for those you love!</h6>
+    <button class="buy-btn btn btn-success" onclick="dataLayer.push({'event': 'click_buy'});">I want to buy!</button>
   <button class="not-interested-btn btn btn-danger" onclick="dataLayer.push({'event': 'click_no_interest'});" >I am not interested!</button>
   </div>
 </div>
 
- <div class="container-sm">
+
+<div class="card">
+  <div class="card-body">
  <h1 class="text-center">Contact us</h1>
    <form id="contact-info">
    <div class="mb-3 align-items-center">
@@ -172,6 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <button type="submit" class="d-flex justify-center btn btn-primary">Submit</button>
   </form>
+  </div>
   </div>
 
   <!-- Product Listing -->
@@ -253,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  </div>
 
    <!-- Product Purchase Toast -->
-
+   <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
  <div id="errorMessage" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
      <!--<img src="./src/poliflower-logo.png" class="rounded me-2" alt="PoliFlower logo" size="1opx"> -->
@@ -264,6 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="toast-body">
     Hey, thanks for your interest! Our website is still under construction. Fill out our contact form and we'll reach out!
   </div>
+</div>
 </div>
 
   <!-- End of Product Purchase Toast -->
