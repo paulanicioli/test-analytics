@@ -25,7 +25,7 @@ function showSettingsBanner(){
  */
 function acceptAllCookies(){
     document.cookie = "analytics_storage=granted";
-    document.cookie = "ads_storage=granted";
+    document.cookie = "ad_storage=granted";
     document.cookie = "ad_user_data=granted";
     document.cookie = "ad_personalization=granted";
     dataLayer.push({'event':'consent_update'});
@@ -34,7 +34,7 @@ function acceptAllCookies(){
 
 function rejectAllCookies(){
     document.cookie = "analytics_storage=denied";
-    document.cookie = "ads_storage=denied";
+    document.cookie = "ad_storage=denied";
     document.cookie = "ad_user_data=denied";
     document.cookie = "ad_personalization=denied";
     dataLayer.push({'event':'consent_update'});
