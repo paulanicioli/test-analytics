@@ -157,8 +157,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="card-body">
     <h5 class="card-title">Are you interested in our flower arrangements?</h5>
     <h6 class="card-subtitle mb-2 text-muted">PoliFlower is here for you and for those you love!</h6>
-    <button class="buy-btn btn btn-success" onclick="dataLayer.push({'event': 'click_buy'});">I want to buy!</button>
-  <button class="not-interested-btn btn btn-danger" onclick="dataLayer.push({'event': 'click_no_interest'});" >I am not interested!</button>
+    <button id="click_buy" class="buy-btn btn btn-success" onclick=window.bn_buttonClickEvent(this)>I want to buy!</button>
+  <button id="click_no_interest" class="not-interested-btn btn btn-danger" onclick=window.bn_buttonClickEvent(this) >I am not interested!</button>
   </div>
 </div>
 
